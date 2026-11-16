@@ -1,0 +1,85 @@
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: #050510;
+  color: #eef2ff;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  text-align: center;
+}
+.wrap { max-width: 860px; margin: 0 auto; padding: 16px 12px 32px; }
+.title {
+  margin: 8px 0 2px;
+  font-size: 42px;
+  letter-spacing: 4px;
+  color: #37e08b;
+  text-shadow: 0 0 18px rgba(55, 224, 139, .55);
+}
+.tagline { margin: 0 0 12px; color: #b9c4ff; font-size: 15px; }
+.game-box { position: relative; width: 100%; max-width: 800px; margin: 0 auto; }
+#scene canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  background: #0a0f1e;
+  border: 2px solid #2b2f6b;
+  border-radius: 12px;
+  touch-action: none;
+}
+#scene { width: 100%; aspect-ratio: 4 / 3; border: 2px solid #2b2f6b; border-radius: 12px; overflow: hidden; background: #0a0f1e; }
+.overlay { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; background: rgba(5,5,16,.72); color: #eef2ff; font-size: 22px; font-weight: 800; border-radius: 12px; z-index: 3; }
+.overlay .sub { font-size: 14px; font-weight: 400; color: #b9c4ff; }
+.hidden { display: none !important; }
+.sens select { background: #14143a; color: #eef2ff; border: 1px solid #2b2f6b; border-radius: 6px; padding: 4px; }
+.hud {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: 8px;
+  font-size: 15px;
+  font-weight: 700;
+  flex-wrap: wrap;
+}
+#fire-btn {
+  position: absolute;
+  right: 12px;
+  bottom: 52px;
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  border: 2px solid #37e08b;
+  background: rgba(55, 224, 139, .85);
+  color: #062;
+  font-size: 16px;
+  font-weight: 800;
+  cursor: pointer;
+  display: none;
+}
+.controls p { margin: 6px 0; font-size: 14px; color: #c9d1ff; }
+.sens {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #c9d1ff;
+}
+.sens input { width: 160px; accent-color: #37e08b; }
+#start-btn {
+  display: block;
+  margin: 12px auto 0;
+  padding: 12px 34px;
+  font-size: 18px;
+  font-weight: 800;
+  color: #111;
+  background: #37e08b;
+  border: 0;
+  border-radius: 999px;
+  cursor: pointer;
+}
+#start-btn:hover { background: #5ff0a5; }
+.foot { margin-top: 14px; font-size: 12px; color: #8b93b8; }
+@media (pointer: coarse) {
+  #fire-btn { display: block; }
+}
