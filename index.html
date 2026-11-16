@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>Tank Strike 3D</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="wrap">
+  <h1 class="title">TANK STRIKE 3D</h1>
+  <p class="tagline">Real 3D tank battle. Blast 15 enemy tanks to win. Don't take 3 shells.</p>
+  <div class="game-box">
+    <div id="scene"></div>
+    <div id="loading" class="overlay"><div>Loading 3D…</div><div class="sub">Three.js r160 via CDN</div></div>
+    <div id="load-error" class="overlay hidden"><div>3D could not load.</div><div class="sub">Check your connection and tap Play to retry.</div></div>
+    <div class="hud" id="hud">
+      <span id="hud-score">Score: 0</span>
+      <span id="hud-kills">Kills: 0/15</span>
+      <span id="hud-hp">HP: 100</span>
+    </div>
+    <button id="fire-btn" type="button">FIRE</button>
+  </div>
+  <div class="controls">
+    <p><strong>Drive:</strong> WASD / Arrow keys — Up forward, Down back, Left/Right turn</p>
+    <p><strong>Aim &amp; shoot:</strong> Mouse aims turret, click or Space to fire &nbsp;•&nbsp; Touch: drag to drive, FIRE auto-aims</p>
+    <p><strong>Pause:</strong> P &nbsp;•&nbsp; <strong>Mute:</strong> M &nbsp;•&nbsp; <strong>Sensitivity:</strong> [ / ] keys</p>
+    <label class="sens">Sensitivity
+      <input id="sens" type="range" min="0.5" max="2" step="0.1" value="1">
+      <span id="sens-val">1.0x</span>
+    </label>
+    <label class="sens">Graphics
+      <select id="gfx">
+        <option value="auto" selected>Auto (best for this device)</option>
+        <option value="ultra">Ultra</option>
+        <option value="low">Low (faster)</option>
+      </select>
+    </label>
+    <button id="start-btn" type="button">Play</button>
+  </div>
+  <p class="foot">Real 3D with Three.js — models, lighting, shadows and textures all built in code. No downloads, no sign-up.</p>
+</main>
+<script src="game.js"></script>
+</body>
+</html>
